@@ -87,8 +87,9 @@ Follow these steps to contribute:
         ```bash
         git clone https://github.com/IEEEDTUCS/IEEEWeb-2025.git
         cd frontend
-        ```
-        
+        npm i
+        npm run dev
+        ```    
 
       - Before starting any new work, make sure your local main branch is up-to-date with the remote repository.
 
@@ -96,13 +97,14 @@ Follow these steps to contribute:
         git checkout main
         git pull origin main
         ```
+        
       - Now, create your new branch from the up-to-date main branch. Name it according to the guidelines (e.g., feature/login-page or yourname).
 
         ```bash
         git checkout -b <your-branch-name>
         ```
 
-4.  *Make Your Changes*
+2.  *Make Your Changes*
       - Once you have completed your changes, stage and commit them with a clear, descriptive message.
 
         ```bash
@@ -112,19 +114,22 @@ Follow these steps to contribute:
         # Commit with a meaningful message
         git commit -m "your_commit_message"
         ```
-      
-        # Add all your changes
 
-6.  *Push Your Branch to the Repository*
+3.  *Push Your Branch to the Repository*
 
       - Push your new branch and its commits to the main repository on GitHub.
       - 
         ```bash
         git push -u origin <your-branch-name>
         ```
-      -Set your branch upstream with -u to directly do 'git push' and always commit to your own branch.
-
-7.  *Create a Pull Request (PR)*
+      - The -u flag sets the upstream branch so in the future you can simply run:
+      -
+          ```bash
+         git push 
+          ```
+    
+      
+4.  *Create a Pull Request (PR)*
 
       - Go to the main repository page on GitHub.
       - GitHub will often show a prompt to "Compare & pull request" for your recently pushed branch. Click it.
