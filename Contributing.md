@@ -114,19 +114,15 @@ Follow these steps to contribute:
         ```
       
         # Add all your changes
-      - Push your new branch and its commits to the main repository on GitHub.
-
-        ```bash
-        git push origin <your-branch-name>
-        ```
-        -Set your branch upstream with -u to directly do 'git push' and always commit to your own branch.
 
 6.  *Push Your Branch to the Repository*
 
       - Push your new branch and its commits to the main repository on GitHub.
-        bash
+      - 
+        ```bash
         git push -u origin <your-branch-name>
-        
+        ```
+      -Set your branch upstream with -u to directly do 'git push' and always commit to your own branch.
 
 7.  *Create a Pull Request (PR)*
 
