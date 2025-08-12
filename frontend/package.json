@@ -18,6 +18,11 @@
     "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
-    "@eslint/eslintrc": "^3"
+    "@eslint/eslintrc": "^3",
+    "@mui/material": "^5.15.15",
+    "@mui/icons-material": "^5.15.15",
+    "lucide-react": "^0.367.0",
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.2.0"
   }
 }
