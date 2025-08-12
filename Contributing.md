@@ -85,8 +85,8 @@ Follow these steps to contribute:
       - Clone the main project repository to your local machine.
 
         ```bash
-        git clone https://github.com/ieee-dtu/website-repo-name.git
-        cd website-repo-name
+        git clone https://github.com/IEEEDTUCS/IEEEWeb-2025.git
+        cd frontend
         ```
         
 
@@ -112,7 +112,7 @@ Follow these steps to contribute:
         # Commit with a meaningful message
         git commit -m "your_commit_message"
         ```
-        bash
+      
         # Add all your changes
       - Push your new branch and its commits to the main repository on GitHub.
 
