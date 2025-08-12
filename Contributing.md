@@ -96,18 +96,11 @@ Follow these steps to contribute:
         git checkout main
         git pull origin main
         ```
-        git checkout main
-        git pull origin main
       - Now, create your new branch from the up-to-date main branch. Name it according to the guidelines (e.g., feature/login-page or yourname).
 
         ```bash
         git checkout -b <your-branch-name>
         ```
-
-      - Now, create your new branch from the up-to-date main branch. Name it according to the guidelines (e.g., feature/login-page or yourname-).
-        bash
-        git checkout -b <your-branch-name>
-        
 
 4.  *Make Your Changes*
       - Once you have completed your changes, stage and commit them with a clear, descriptive message.
@@ -117,7 +110,7 @@ Follow these steps to contribute:
         git add .
 
         # Commit with a meaningful message
-        git commit -m "feat: Add responsive navbar component"
+        git commit -m "your_commit_message"
         ```
         bash
         # Add all your changes
@@ -126,14 +119,13 @@ Follow these steps to contribute:
         ```bash
         git push origin <your-branch-name>
         ```
-        git commit -m "feat: Add responsive navbar component"
-        
+        -Set your branch upstream with -u to directly do 'git push' and always commit to your own branch.
 
 6.  *Push Your Branch to the Repository*
 
       - Push your new branch and its commits to the main repository on GitHub.
         bash
-        git push origin <your-branch-name>
+        git push -u origin <your-branch-name>
         
 
 7.  *Create a Pull Request (PR)*
