@@ -2,6 +2,8 @@
 
 # Contributing to the IEEE DTU Website
 
+Refer to [IEEE-DTU](https://www.ieeedtu.in/) existing website for the design to be build as
+
 These guidelines ensure smooth collaboration, clean code, and a respectful working environment for all contributors. Please read carefully before contributing.
 
  1. Git & Branch Management
