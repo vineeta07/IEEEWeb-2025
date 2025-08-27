@@ -1,8 +1,9 @@
 import * as React from "react";
-import {AnimatePresence, motion, useScroll, useTransform} from "framer-motion";
-import Navbar from '../utils/Navbar';
-import StyledButton from "./LandingPage/StyledButton";
-import Chatbot from '../components/ChatBot/chatBot';
+import { motion, useScroll, useTransform} from "framer-motion";
+
+import Navbar from '../../utils/Navbar';
+import StyledButton from "@/components/LandingPage/StyledButton";
+import Link from "next/link"; 
 //Snackbar Imports
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
@@ -17,9 +18,20 @@ export default function LandingPage() {
     const opacity = useTransform(scrollY, [0, 400], [1, 0]);
     const y = useTransform(scrollY, [0, 400], [0, -100]);
     const [navbarOpened, setNavbarOpened] = React.useState(false);
-    const [isChatOpen, setIsChatOpen] = React.useState(false);
+   
     // --- State and handlers for Snackbar Added Here ---
     const [openSnackbar, setOpenSnackbar] = React.useState(false);
+    React.useEffect(() => {
+        // Check if snackbar has already been shown in this browser
+        const hasShownSnackbar = localStorage.getItem("hasShownSnackbar");
+        if (!hasShownSnackbar) {
+            const timer = setTimeout(() => {
+                setOpenSnackbar(true);
+                localStorage.setItem("hasShownSnackbar", "true");
+            }, 5500);
+            return () => clearTimeout(timer);
+        }
+    }, []);
 
     const handleSignInClick = () => {
         setOpenSnackbar(true);
@@ -37,7 +49,6 @@ export default function LandingPage() {
     React.useEffect(() => {
         const openNavbar = () => {
             setNavbarOpened(true); // open on every scroll gesture
-
         };
 
         window.addEventListener("wheel", openNavbar, { passive: true });
@@ -47,10 +58,11 @@ export default function LandingPage() {
             window.removeEventListener("wheel", openNavbar);
             window.removeEventListener("touchmove", openNavbar);
         };
-    }, []); // no navbarOpened dependency — keeps listener stable
+    }, [navbarOpened]);
 
     return (
         <div className="w-full h-screen flex flex-col overflow-hidden snap-y snap-mandatory">
+            
             <Navbar setOpen={navbarOpened} onClose={() => setNavbarOpened(false)} />
 
             {/* Title */}
@@ -96,7 +108,7 @@ export default function LandingPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                        className="text-white text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold mt-1 leading-snug drop-shadow-lg"
+                        className="text-white text-3xl md:text-6xl lg:text-7xl font-heading font-extrabold mt-1 leading-snug drop-shadow-lg"
                     >
                         IEEE DTU Student Branch
                     </motion.h1>
@@ -138,75 +150,19 @@ export default function LandingPage() {
                 </motion.div>
 
             </motion.section>
-            <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
-
-                <AnimatePresence>
-
-                    {isChatOpen && (
-
-                        <motion.div
-
-                            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-
-                            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-
-                        >
-
-                            <Chatbot onClose={() => setIsChatOpen(false)} />
-
-                        </motion.div>
-
-                    )}
-
-                </AnimatePresence>
-
-
-
-                <motion.button
-
-                    onClick={() => setIsChatOpen(!isChatOpen)}
-
-                    className="p-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-
-                    whileHover={{ scale: 1.1 }}
-
-                    whileTap={{ scale: 0.9 }}
-
-                >
-
-                    <AnimatePresence mode="wait">
-
-                        {isChatOpen ? (
-
-                            <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-
-                            </motion.div>
-
-                        ) : (
-
-                            <motion.div key="chat" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-
-                            </motion.div>
-
-                        )}
-
-                    </AnimatePresence>
-
-                </motion.button>
-
-            </div>
+            
             {/* --- Snackbar Component Added Here --- */}
-            <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleSnackbarClose}>
-                <Alert onClose={handleSnackbarClose} severity="info" sx={{ width: '100%' }}>
-                    This feature is coming soon!
+            <Snackbar open={openSnackbar} autoHideDuration={8000} onClose={handleSnackbarClose}>
+                <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+                    Get access to exclusive benefits!{"\u00A0"}{"\u00A0"}
+                    <Link
+                        
+                        href="/api/auth/signin" 
+                        
+                        className="border-2 border-white rounded cursor-pointer px-2 py-1 hover:bg-white hover:text-black"
+                    >
+                        Sign in
+                    </Link>
                 </Alert>
             </Snackbar>
             {/* --- End of Snackbar component --- */}

@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-
 const Chatbot = ({ onClose }) => {
     const initialMessages = [
-        { id: 1, text: 'Welcome to IEEE DTU', sender: 'bot' },
-        { id: 2, text: 'Coming Soon', sender: 'bot' },
+        { id: 1, text: 'Get to know all about IEEE DTU \n with our AI Assistant!', sender: 'bot' },
     ];
 
     const [messages, setMessages] = useState(initialMessages);
@@ -82,7 +80,7 @@ const Chatbot = ({ onClose }) => {
             </div>
             <div className="p-4 border-t border-gray-200 bg-white flex-shrink-0">
                 <form onSubmit={handleSendMessage} className="flex items-center space-x-3">
-                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="What do you want to know?" className="flex-1 w-full px-4 py-2 text-sm bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <input type="text" value={input} onChange={(e) => setInput(e.target.value)} disabled placeholder="Coming Soon!" className="flex-1 w-full px-4 py-2 text-sm bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                     <button type="submit" className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50" disabled={!input.trim()}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                     </button>
