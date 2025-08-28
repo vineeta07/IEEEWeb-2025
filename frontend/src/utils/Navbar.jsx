@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Signin from './Signin'; 
+import { Drawer } from '@mui/material';
 
 export default function Navbar({ setOpen, onClose }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +18,8 @@ export default function Navbar({ setOpen, onClose }) {
     { name: "Events", href: "/IEEEDTU/events" },
     { name: "Council", href: "/IEEEDTU/council" },
   ];
-
+  
+  const [openSignIn, setOpenSignIn] = useState(false);
   // Keep body from scrolling when sidebar is open
   useEffect(() => {
     setMenuOpen(setOpen);
@@ -101,18 +104,28 @@ export default function Navbar({ setOpen, onClose }) {
             <div className="border-t border-gray-800 my-4"></div>
 
             {/* Sign In Button */}
-            <Link
-              href="/api/auth/signin"
-              onClick={() => setMenuOpen(false)}
+            <button
+              onClick={() => { setMenuOpen(false); setOpenSignIn(true); }}
               className="block w-full text-center py-2 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors font-semibold"
             >
               Sign In
-            </Link>
+            </button>
           </motion.div>
           
         )}
       </AnimatePresence>
-      
+      <Drawer
+        anchor="right"
+        open={openSignIn}
+        onClose={() => setOpenSignIn(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: "#000",
+          }
+        }}
+      >
+        <Signin />
+      </Drawer>
     </>
   );
 }
