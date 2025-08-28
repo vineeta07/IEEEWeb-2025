@@ -51,7 +51,7 @@ export default function Chapter() {
           <div className={styles.serviceText}>
             <img 
               height="300"
-              src="/aboutChapterSection/CS_IEEE.png"
+              src="/your_component_name/CS_IEEE.png"
               className={styles.chapterImage}
               alt="IEEE CS Logo"
             />
@@ -71,7 +71,6 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('cs') ? ` ${styles.visible}` : ''}`}
-              href='/IEEEDTU/Chapters/CS'
             >
               Know More
             </a>
@@ -96,7 +95,7 @@ export default function Chapter() {
           <div className={styles.serviceText}>
             <img 
               height="300"
-              src="/aboutChapterSection/PES_IEEE.png"
+              src="/your_component_name/PES_IEEE.png"
               className={styles.chapterImage}
               alt="IEEE PES Logo"
             />
@@ -116,7 +115,6 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('pes') ? ` ${styles.visible}` : ''}`}
-              href='/IEEEDTU/Chapters/PES-IAS'
             >
               Know More
             </a>
@@ -141,7 +139,7 @@ export default function Chapter() {
           <div className={styles.serviceText}>
             <img 
               height="300"
-              src="/aboutChapterSection/WIE_IEEE.png"
+              src="/your_component_name/WIE_IEEE.png"
               className={styles.chapterImage}
               alt="IEEE WIE Logo"
             />
@@ -161,7 +159,6 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('wie') ? ` ${styles.visible}` : ''}`}
-              href='/IEEEDTU/Chapters/WIE'
             >
               Know More
             </a>
@@ -186,7 +183,7 @@ export default function Chapter() {
           <div className={styles.serviceText}>
             <img 
               height="300"
-              src="/aboutChapterSection/CASS_IEEE.png"
+              src="/your_component_name/CASS_IEEE.png"
               className={styles.chapterImage}
               alt="IEEE CASS Logo"
             />
@@ -206,7 +203,6 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('cass') ? ` ${styles.visible}` : ''}`}
-              href='/IEEEDTU/Chapters/CASS'
             >
               Know More
             </a>
