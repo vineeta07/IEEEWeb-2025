@@ -7,6 +7,8 @@ import Link from "next/link";
 //Snackbar Imports
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import Signin from '../../utils/Signin';
+import Drawer from '@mui/material/Drawer';
 
 // --- Alert component for Snackbar styling ---
 const Alert = React.forwardRef(function Alert(props, ref) {
@@ -19,6 +21,7 @@ export default function LandingPage() {
     const y = useTransform(scrollY, [0, 400], [0, -100]);
     const [navbarOpened, setNavbarOpened] = React.useState(false);
    
+    const[openSignIn , setOpenSignIn] = React.useState(false);
     // --- State and handlers for Snackbar Added Here ---
     const [openSnackbar, setOpenSnackbar] = React.useState(false);
     React.useEffect(() => {
@@ -34,7 +37,7 @@ export default function LandingPage() {
     }, []);
 
     const handleSignInClick = () => {
-        setOpenSnackbar(true);
+        setOpenSignIn(true);
     };
 
     const handleSnackbarClose = (event, reason) => {
@@ -168,6 +171,18 @@ export default function LandingPage() {
             </Snackbar>
             </div>
             {/* --- End of Snackbar component --- */}
+            <Drawer
+                     anchor="right"
+                     open={openSignIn}
+                     onClose={() => setOpenSignIn(false)}
+                     PaperProps={{
+                       sx: {
+                         backgroundColor: "#000",
+                       }
+                     }}
+                   >
+                     <Signin />
+                   </Drawer>
         </div>
     );
 }
