@@ -71,6 +71,8 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('cs') ? ` ${styles.visible}` : ''}`}
+              href='/IEEEDTU/Chapters/CS' 
+              target='_blank'
             >
               Know More
             </a>
@@ -115,6 +117,8 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('pes') ? ` ${styles.visible}` : ''}`}
+              href='/IEEEDTU/Chapters/PES-IAS'
+              target='_blank'
             >
               Know More
             </a>
@@ -159,6 +163,8 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('wie') ? ` ${styles.visible}` : ''}`}
+              href='/IEEEDTU/Chapters/WIE'
+              target='_blank'
             >
               Know More
             </a>
@@ -203,6 +209,8 @@ export default function Chapter() {
             </p>
             <a  
               className={`${styles.btnStroke2} ${styles.scrollFadeUp} ${styles.delay400}${visibleSections.has('cass') ? ` ${styles.visible}` : ''}`}
+              href='/IEEEDTU/Chapters/CASS'
+              target='_blank'
             >
               Know More
             </a>
