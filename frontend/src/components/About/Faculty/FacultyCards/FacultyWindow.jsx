@@ -7,25 +7,25 @@ function FacultyWindow() {
       name: "Prof. Rahul Kataria",
       designation: "Professor, CSE Department DTU",
       details: "IEEE DTU, CS chapter\nFaculty advisor",
-      imageUrl: "/Faculty/Prof-Rahul.jpg",
+      imageUrl: "/aboutPage/Faculty/Prof-Rahul.jpg",
     },
     {
       name: "Prof. Rachna Garg",
       designation: "Chair, IEEE Delhi Section",
       details: "Faculty advisor, IEEE DTU PES-IAS Student Chapter",
-      imageUrl: "/Faculty/Prof-Rachna.png",
+      imageUrl: "/aboutPage/Faculty/Prof-Rachna.png",
     },
     {
       name: "Dr. Sonam Rewari",
       designation: "Asst Professor, ECE Department",
       details: "Faculty advisor, IEEE DTU WIE",
-      imageUrl: "/Faculty/Dr-Sonam.jpg",
+      imageUrl: "/aboutPage/Faculty/Dr-Sonam.jpg",
     },
     {
       name: "Dr. Deva Nand",
       designation: "Associate Professor, ECE Department",
       details: "Faculty advisor, IEEE DTU CASS",
-      imageUrl: "/Faculty/dr-devanand.jpg",
+      imageUrl: "/aboutPage/Faculty/dr-devanand.jpg",
     },
   ];
 

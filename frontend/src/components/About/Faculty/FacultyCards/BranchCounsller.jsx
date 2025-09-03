@@ -48,7 +48,7 @@ function BranchCounsellor() {
       style={{ transitionDelay: '0.2s' }}>
         <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-md bg-gray-50 p-1 sm:p-2 transform transition-all duration-500 hover:shadow-lg w-full max-w-sm lg:max-w-none">
           <img
-            src="/Faculty/Prof-J-Panda.png"
+            src="/aboutPage/Faculty/Prof-J-Pand.jpeg"
             alt="Prof. Jeebananda Panda"
             className="rounded-lg sm:rounded-xl object-cover w-full h-64 sm:h-80 lg:h-full transition-all duration-500 hover:scale-[1.03]"
           />

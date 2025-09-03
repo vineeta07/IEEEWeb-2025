@@ -3,9 +3,9 @@
 
         "title": "IEEE DTU CS CHAPTER",
 
-        "logo": "/images/Chapters/IEEE_CS.png",
+        "logo": "/aboutPage/aboutChapterSection/CS_IEEE.png",
 
-        "backdropImg": "/images/Chapters/Backdrops/CS_backdrop.png",
+        "backdropImg": "/images/Chapters/Backdrops/CS_backdrop.jpeg",
 
         "images": ["/images/Chapters/Images/vihaan.jpg", "/images/Chapters/Images/vihaan2.jpg", "/images/Chapters/Images/techweek.jpg", "/images/Chapters/Images/xtreme.jpg", "/images/Chapters/Images/group.jpg"],
 
@@ -18,7 +18,7 @@
         "events": {
             "isEvents": true,
             "heading": "Events",
-            "images": ["/Events/vihaan007.png", "/Events/techweek23.png", "/Events/mist.png", "/Events/ieeextreme.png", "/Events/hackaithon.png", "/Events/blockchain.png"]
+            "images": ["/Events/vihaan007.jpeg", "/Events/techweek23.jpeg", "/Events/mist.jpeg", "/Events/ieeextreme.jpeg", "/Events/hackaithon.jpeg", "/Events/blockchain.jpeg"]
         },
 
         "membership": {
@@ -54,9 +54,9 @@
 
         "title": "IEEE DTU PES-IAS CHAPTER",
 
-        "logo": "/images/Chapters/PES_IEE.png",
+        "logo": "/aboutPage/aboutChapterSection/PES_IEEE.png",
 
-        "backdropImg": "/images/Chapters/Backdrops/PES_IAS_backdrop.png",
+        "backdropImg": "/images/Chapters/Backdrops/PES_IAS_backdrop.jpeg",
 
         "images": ["/images/Chapters/Images/pese1.jpg", "/images/Chapters/Images/pese2.jpg", "/images/Chapters/Images/group.jpg"],
 
@@ -69,7 +69,7 @@
         "events": {
             "isEvents": true,
             "heading": "Events",
-            "images": ["/Events/dssywc.png", "/Events/tinkercase.jpg"]  
+            "images": ["/Events/dssywc.jpeg", "/Events/tinkercase.jpg"]  
         },
 
         "membership": {
@@ -105,9 +105,9 @@
 
         "title": "IEEE DTU WIE CHAPTER",
 
-        "logo": "/images/Chapters/IEEE_WIE.png",
+        "logo": "/aboutPage/aboutChapterSection/WIE_IEEE.png",
 
-        "backdropImg": "/images/Chapters/Backdrops/WIE_backdrop.png",
+        "backdropImg": "/images/Chapters/Backdrops/WIE_backdrop.jpeg",
 
         "images": ["/images/Chapters/Images/kids.jpg", "/images/Chapters/Images/vihaan.jpg", "/images/Chapters/Images/group.jpg", "/images/Chapters/Images/ishwarngo.jpg", "/images/Chapters/Images/IMG_0412.jpeg"],
 
@@ -120,7 +120,7 @@
         "events": {
             "isEvents": true,
             "heading": "Events",
-            "images": ["/Events/dssywc.png", "/Events/vihaan007.png", "/Events/wievek.png"]  
+            "images": ["/Events/dssywc.jpeg", "/Events/vihaan007.jpeg", "/Events/wievek.jpeg"]  
         },
 
         "membership": {
@@ -156,7 +156,7 @@
 
         "title": "IEEE DTU CASS CHAPTER",
 
-        "logo": "/images/Chapters/IEEE_CASS.png",
+        "logo": "/aboutPage/aboutChapterSection/CASS_IEEE.png",
 
         "backdropImg": "/images/Chapters/Backdrops/CAS_backdrop.png",
 
@@ -171,7 +171,7 @@
         "events": {
             "isEvents": true,
             "heading": "Events",
-            "images": ["/Events/vihaan007.png", "/Events/techweek23.png", "/Events/mist.png", "/Events/ieeextreme.png", "/Events/hackaithon.png", "/Events/blockchain.png"]
+            "images": ["/Events/vihaan007.jpeg", "/Events/techweek23.jpeg", "/Events/mist.jpeg", "/Events/ieeextreme.jpeg", "/Events/hackaithon.jpeg", "/Events/blockchain.jpeg"]
         },
 
         "membership": {

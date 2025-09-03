@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const Slideshow = () => {
   const images = [
-    "/slideshow/img1.jpg",
-    "/slideshow/img2.jpg",
-    "/slideshow/img3.jpg"
- 
+    "/aboutPage/topImages/img1.jpg",
+    "/aboutPage/topImages/img2.jpg",
+    "/aboutPage/topImages/img3.jpg"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
