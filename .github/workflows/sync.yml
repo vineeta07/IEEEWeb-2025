@@ -8,12 +8,13 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    if: ${{ secrets.DEPLOY_SECRET != '' }}  # only run if secret is set
 
     steps:
       - name: Checkout fork
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.DEPLOY_SECRET }} # Personal access token with repo scope
+          token: ${{ secrets.DEPLOY_SECRET }}
           fetch-depth: 0
 
       - name: Add upstream remote
