@@ -7,14 +7,6 @@ import Link from "next/link";
 //Snackbar Imports
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-<<<<<<< HEAD
-import Signin from '../../utils/Signin';
-import Drawer from '@mui/material/Drawer';
-
-=======
-import Signin from '../../utils/signin';
-import Drawer from '@mui/material/Drawer';
->>>>>>> 72df439fd285bc413637f1af6921230f0df112db
 
 // --- Alert component for Snackbar styling ---
 const Alert = React.forwardRef(function Alert(props, ref) {
@@ -189,27 +181,6 @@ export default function LandingPage() {
             </Snackbar>
             </div>
             {/* --- End of Snackbar component --- */}
-<<<<<<< HEAD
-                <Drawer
-=======
-            <Drawer
->>>>>>> 72df439fd285bc413637f1af6921230f0df112db
-                     anchor="right"
-                     open={openSignIn}
-                     onClose={() => setOpenSignIn(false)}
-                     PaperProps={{
-                       sx: {
-                         backgroundColor: "#000",
-<<<<<<< HEAD
-=======
-                         width: { xs:"20rem", sm: "22rem", md: "25rem" },
-                         
->>>>>>> 72df439fd285bc413637f1af6921230f0df112db
-                       }
-                     }}
-                   >
-                     <Signin />
-                   </Drawer>
         </div>
     );
 }
